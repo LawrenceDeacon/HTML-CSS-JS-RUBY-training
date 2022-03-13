@@ -13,6 +13,7 @@
 <body>
     <h1>Javascript Notes</h1>
     <p>See console.log() for some information</p>
+    <p>Rock Paper Scissors on start of this document, see results in console</p>
     <div>
         <h2>Variables</h2>
         <ul>
@@ -34,8 +35,9 @@
                 </pre>
 
             </li>
-            <li>Default function argument use function(name = "Lawrence"){}, 
-                <span>will use default Lawrence if nothing passed</span></li>
+            <li>Default function argument use function(name = "Lawrence"){},
+                <span>will use default Lawrence if nothing passed</span>
+            </li>
             <li>Can use IIFE (Immediatley Invoked Function Expressions), <span>function calls itself</span>
                 <ul>
                     <li>
@@ -66,7 +68,7 @@
             <li>Arrays 0 indexed, first item is array[0]</li>
             <li>Lots of methods for Arrays, some listed below
                 <ul>
-                    <li>Push - Adds element to the end of an array, 
+                    <li>Push - Adds element to the end of an array,
                         <span>array.push("New Item");</span>
                     </li>
                     <li>Pop - removes last item <span>array.pop();</span> </li>
@@ -78,7 +80,7 @@
                     </li>
                 </ul>
             </li>
-            <li>Array methods listed 
+            <li>Array methods listed
                 <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">Here</a>
             </li>
         </ul>
@@ -86,7 +88,7 @@
     <div>
         <h2>Objects</h2>
         <ul>
-            <li>To create an object use one of the following 
+            <li>To create an object use one of the following
                 <ul>
                     <li>let name = {}; for an empty object</li>
                     <li><span>Note the comma to seperate</span>
@@ -108,15 +110,59 @@
         <p>see dev console in browser for errors, usually F12</p>
         <ul>
             <li>Reference Error - variable not defined, accessible (ie Scope), spelt right</li>
-            <li>Syntax Error - Code not written correctly</li>            
+            <li>Syntax Error - Code not written correctly</li>
             <li>Type Error - Incompatibility issues with Argument//Operand</li>
         </ul>
     </div>
     <div>
         <h2>DOM manipulation</h2>
-        <ul>
-            <li></li>
-        </ul>
+        <p>Ensure you either run the script at the bottom of the HTML file, otherwise the
+            DOM will not have loaded the elements needed.
+        </p>
+        <p>Or run in the &lthead&gt tags and put defer
+            as seen here, &ltscript src="script.js" defer&gt&ltscript&gt</p>
+        <div>
+            <h3>Selectors</h3>
+            <ul>
+                <li>Selectors work the same as CSS selectors ie .class and #id</li>
+                <li>Can also use parent child relations, ie lastElementChild</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Query Selectors</h3>
+            <ul>
+                <li>element.querySelector(selector) - returns the first match found</li>
+                <li>element.querySelectorAll(selectors) - returns a nodelist containing
+                    references to all matches
+                </li>
+                <li>Nodelist looks like an Array but is missing some array methods</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Create and Append</h3>
+            <ul>
+                <li>let div = document.createElement('div'); - creates a div</li>
+                <li>div.appendChild('p') - adds a p to the end of div</li>
+                <li>div.insertBefore('p', #id) - adds p before #id</li>
+                <li>div.removeChild('p') - removes p from div</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Attributes and Styling</h3>
+            <ul>
+                <li>Can style inline with div.style.color = "blue",
+                    <span>hypenated attributes ie font-size does not work.
+                        Use fontSize, ['font-size'] or "font-size: 12px"</span>
+                </li>
+                <li>div.setAttribute('id', 'theDiv') - updates the targets ID to theDiv</li>
+                <li>div.classList.add/remove/toggle - use to manipulate the class' of an element</li>
+                <li>div.textContent = 'Hello World!' - Add text to elements</li>
+                <li>div.innerHTML = '&ltspan&gtHello World!&lt/span&gt' - add html,
+                    <span>Security Risk, use sparingly!</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 
