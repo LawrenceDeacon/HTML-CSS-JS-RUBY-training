@@ -163,6 +163,43 @@
                 </li>
             </ul>
         </div>
+        <div>
+            <h3>Events</h3>
+            <ul>
+                <li>various ways to listen to events 
+                    <ul>
+                        <li>in the HTML, &ltbutton onClick = alert('An Alert')&gtClick me&lt/button&gt</li>
+                        <li>in javascript using onClick for that element
+                            <pre>
+                                const btn = document.querySelector('#btn');
+                                btn.onClick = () => alert("Hello World!");
+                            </pre>
+                        </li>
+                        <li>Setting an event listener <span>Best Way! Can add multiple events</span>
+                            <pre>
+                                const btn = dcument.querySelector('#btn');
+                                btn.addEventListener('click', ()=> {
+                                    alert("Hello World!");
+                                });
+                            </pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>All of the above can use named functions instead of onClick or click</li>
+                <li>Add multiple listeners to child elements
+                    <pre>
+                        // Returns a nodelist
+                        const buttons = document.querySelectorAll('button');
+                        // Loops through each item in the nodelist and executs the code block
+                        buttons.forEach((button) => {
+                            button.addEventListener('click', () => {
+                                alert(button.id);
+                            });
+                        })
+                    </pre>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 
