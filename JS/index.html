@@ -205,7 +205,24 @@
                 <li>Bubbling - on event like click, you click on the button, and the div it is in
                     and the body, and the HTML tag etc
                 </li>
-                
+                <li>To stop bubbling use e.stopPropagation() and higher events will not trigger</li>
+                <li>addEventListener has 3 arguments in it's methods
+                    <ul>
+                        <li>The event, ie 'click'</li>
+                        <li>The action, ie the function to do something after clicking</li>
+                        <li>Options such as capture and once, for example
+                            <pre>
+                                div.addEventListener('click', () => {
+                                    console.log("This is my action");
+                                }, {
+                                    //<span>this is the Options Object!</span>
+                                    capture: true, //defaults to false, on true will stop bubbling
+                                    once: true //Will only allow a button for example to be pressed once ever!
+                                })
+                            </pre>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
