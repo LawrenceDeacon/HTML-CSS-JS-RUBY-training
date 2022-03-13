@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Javascript Notes</h1>
+    <p>See console.log() for some information</p>
+    <div>
+        <h2>Variables</h2>
+        <ul>
+            <li>Use let or const to define variables</li>
+            <li>let name; creates an empty variable</li>
+            <li>let name = "Default"; creates a string variable</li>
+            <li>Can use numbers, booleans, [] arrays, {} objects, "" strings and more</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Functions</h2>
+        <ul>
+            <li>
+                <pre>
+                    function nameOfFunction(argument1, argument 2){
+                        let code = "Enter code to run in here"
+                        let backtick = `Can use arguments here like ${argument1}` to imput variables directly into a string
+                    }
+                </pre>
+
+            </li>
+            <li>Can use IIFE (Immediatley Invoked Function Expressions), <span>function calls itself</span>
+                <ul>
+                    <li>
+                        <pre>
+                            (function(a){
+                                console.log(`Display this message ${a}`);
+                            }("Hello"));
+                        </pre>
+                    </li>
+                </ul>
+            </li>
+            <li>Anonymous Function can be used for one line Functions
+                <ul>
+                    <li>
+                        <pre>
+                            let secondName = (x) => {console.log(`${x} is my argument`)};
+                            secondName("Deacon");
+                        </pre>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Arrays</h2>
+        <ul>
+            <li>Arrays created with [] for example ley newArray = [];</li>
+            <li>Arrays 0 indexed, first item is array[0]</li>
+            <li>Lots of methods for Arrays, some listed below
+                <ul>
+                    <li>Push - Adds element to the end of an array, 
+                        <span>array.push("New Item");</span>
+                    </li>
+                    <li>Pop - removes last item <span>array.pop();</span> </li>
+                    <li>shift - removes first element and shifts the rest left one
+                        <span>array.shift();</span>
+                    </li>
+                    <li>unshift - adds new item to first element
+                        <span>array.unshift("New Item");</span>
+                    </li>
+                </ul>
+            </li>
+            <li>Array methods listed 
+                <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">Here</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
