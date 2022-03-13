@@ -35,7 +35,7 @@ function computerPlays() {
 
 // Player Choice
 function playerChoice (){
-    let choice = prompt().toLowerCase();
+    // let choice = prompt().toLowerCase();
     // console.log(playerChoice);
     comparison(choice, computerChoice);
 }
