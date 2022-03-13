@@ -180,10 +180,12 @@
                         <li>Setting an event listener <span>Best Way! Can add multiple events</span>
                             <pre>
                                 const btn = dcument.querySelector('#btn');
-                                btn.addEventListener('click', ()=> {
+                                btn.addEventListener('click', (e)=> {
                                     alert("Hello World!");
                                 });
                             </pre>
+                            <span>(e) in the function above is a callback, and shows lots of useful information, 
+                                ie using e.target will show which button was pressed</span>
                         </li>
                     </ul>
                 </li>
