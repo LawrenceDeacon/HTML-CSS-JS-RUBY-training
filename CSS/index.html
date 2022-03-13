@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>CSS Notes</h1>
+    <div>
+        <h2>Selectors</h2>
+        <h3>ID's and Classes</h3>
+        <ul>
+            <li>ID's = Add in html tag, id='xyz', <span>in CSS with #xyz</span></li>
+            <li>Classes' = Add in html tag. class='xyz', <span>select in CSS with .xyz</span></li>
+        </ul>
+
+        <h3>Using Selectors</h3>
+        <ul>
+            <li>To use selectors in CSS use div{}</li>
+            <li>Chain selectors .class1.class2{} , <span>Only one element can be chained 
+                ie div.class1{} cannot use divp
+            </span></li>
+            <li>To chose child elements use a space for example, <span>div p {} will
+                    only select p's that are wrapped in a div</span>
+            </li>
+        </ul>
+
+        <h3>Propertys</h3>
+        <ul>
+            <li>Properties are put within the selectors {}</li>
+            <li>Properties are written as follows, property-name: value; , <span>
+                for example color: red; would make text go red as seen here
+            </span></li>
+            <li>Full list of properties can be found 
+                <a href="https://www.w3schools.com/cssref/default.asp">Here</a></li>
+        </ul>
+        
+    </div>
+    <div>
+        <h2>Flex Box</h2>
+        <ul>
+            <li>To create a flex box use display:flex;</li>
+            <li>To create a flex child use flex:x y z; Typically use flex:1;
+                <ul>
+                    <li>x = Grow, <span>2 would make this item grow twice as large</span></li>
+                    <li>y = Shrink, <span>if 1 all shrink at same rate, 0 does not shrink</span></li>
+                    <li>z = Basis, <span>sets initial size before shrink or growth</span></li>
+                </ul>
+                Can also use
+                <ul>
+                    <li>flex-grow:x;</li>
+                    <li>flex-shrink:x; <span>0 to not shrink</span></li>
+                    <li>flex-basis:x; <span>commonly use auto</span></li>
+                </ul>
+            </li>
+            <li>2 axis' to flex boxes, main and cross
+                <ul>
+                    <li>Main Axis, by default is horizontal, <span>use flex-direction: column
+                        to change to Vertical</span>
+                    </li>
+                    <li>Cross Axis is the opposite of Main axis</li>
+                </ul>
+            </li>
+            <li>Justify-xxx affects the Main Axis</li>
+            <li>Align-xxx affects the Cross Axis</li>
+            <li>For reference see <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Here</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
