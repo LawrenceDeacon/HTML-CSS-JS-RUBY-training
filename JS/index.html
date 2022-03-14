@@ -103,6 +103,20 @@
             </li>
             <li>Use dot notation to change for example name.firstName = "Michael"</li>
             <li>To read a value use dot notation</li>
+            <li>delete name.firstName to delete a property</li>
+            <li>can use [keyName] to reference a variable,
+                <span>[] can write simple code in brackets, ie key = [variable + 10]</span>
+            </li>
+            <li>No restriction on porperty names, ie let, function etc</li>
+            <li>non-existant property = undefined</li>
+            <li>"firstName" in name = true if it exists </li>
+            <li>
+                <pre>
+                    for (key in object){
+                        code for each key in object
+                    }
+                </pre>
+            </li>
         </ul>
     </div>
     <div>
@@ -167,7 +181,7 @@
         <div>
             <h3>Events</h3>
             <ul>
-                <li>various ways to listen to events 
+                <li>various ways to listen to events
                     <ul>
                         <li>in the HTML, &ltbutton onClick = alert('An Alert')&gtClick me&lt/button&gt</li>
                         <li>in javascript using onClick for that element
@@ -183,7 +197,7 @@
                                     alert("Hello World!");
                                 });
                             </pre>
-                            <span>(e) in the function above is a callback, and shows lots of useful information, 
+                            <span>(e) in the function above is a callback, and shows lots of useful information,
                                 ie using e.target will show which button was pressed</span>
                         </li>
                     </ul>
