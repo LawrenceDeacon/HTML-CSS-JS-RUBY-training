@@ -1,13 +1,7 @@
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
-}
 
-let sum = 0;
 
-for(let key in salaries){
-    sum += salaries[key];
-}
 
-alert(salaries[key]);
+let comments = [{ "id": 823423}];
+
+const comment = comments.find(comment => comment.id === 823423);
+console.log(comment);
