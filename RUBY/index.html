@@ -5,9 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruby</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <a href="../index.html">Index</a>
-
+    <h1>Ruby Notes</h1>
+    <p>Notes on Ruby</p>
+    <p>Files in ruby named file.rb</p>
+    <p><span>Everything is an OBJECT!!</span></p>
+    <div>
+        <h2>Data types</h2>
+        <ul>
+            <li>Numbers methods
+                <ul>
+                    <li>3.to_f = to float</li>
+                    <li>3.56.to_i = to INT</li>
+                    <li>2.even? = true if even</li>
+                    <li>5.odd? = true if odd</li>
+                    <li>age += 4 - adds 4 to the variable age, and sets age to new result
+                        also -=, *=, /=
+                    </li>
+                </ul>
+            </li>
+            <li>Strings methods
+                <ul>
+                    <li>"string".concat("Another String"), can also use "String" &lt&lt "Another String"
+                        also "String" + "Another String"
+                    </li>
+                    <li>substrings = "Hello"[0] = "H", "Hello"[0, 4] = "Hell"</li>
+                    <li>Escape charactors
+                        <ul>
+                            <li>\ is the escape char for a backslash use \\</li>
+                            <li>\r - carriage return</li>
+                            <li>\n - new line</li>
+                            <li>\s - space</li>
+                            <li>\t - tab</li>
+                        </ul>
+                    </li>
+                    <li>Interpolation, ie variables in strings #{variable}. <span>Must use double quotes!</span></li>
+                    <li>String Methods
+                        <ul>
+                            <li>.capitalize</li>
+                            <li>.to_s - toString</li>
+                            <li>.include?("foo") - does string include foo </li>
+                            <li>.upcase + .downcase</li>
+                            <li>.empty? , returns true if empty</li>
+                            <li>.reverse</li>
+                            <li>.split("") - puts into an array, can comma seperate with .split(",")</li>
+                            <li>.gsub("x", "y") - substitutes all x's for y's, .sub for just the first x found</li>
+                            <li>.insert(-1, "Added String") - adds "Added String at the end of original string"</li>
+                            <li>.delete("x") - deletes all x's in string</li>
+                            <li>"!".prepend("String") - returns "String!"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Symbols are created with :mySymbol effectivly pointers to location in memory
+                Variables are a new location each time called
+            </li>
+            <li>Booleans - true / false</li>
+            <li>nil - ie undefined</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Variables</h2>
+        <ul>
+            <li>name = "Value"</li>
+            <li>variable names use snake_case</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Input + output</h2>
+        <h3>Inputs</h3>
+        <ul>
+            <li>.gets = returns user input</li>
+        </ul>
+        <h3>Outputs</h3>
+        <ul>
+            <li>print() - keeps on same line</li>
+            <li>puts() - appends new line</li>
+            <li>p() - Better for debuggin</li>
+        </ul>
+    </div>
 </body>
 </html>
