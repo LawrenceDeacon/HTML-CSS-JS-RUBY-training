@@ -73,19 +73,197 @@
         <ul>
             <li>name = "Value"</li>
             <li>variable names use snake_case</li>
+            <li>Constants should be capitalized!</li>
         </ul>
     </div>
     <div>
         <h2>Input + output</h2>
         <h3>Inputs</h3>
         <ul>
-            <li>.gets = returns user input</li>
+            <li>.gets = returns user input, always with \n</li>
+            <li>.gets.chomp - returns .gets without \n</li>
         </ul>
         <h3>Outputs</h3>
         <ul>
             <li>print() - keeps on same line</li>
             <li>puts() - appends new line</li>
             <li>p() - Better for debuggin</li>
+        </ul>
+    </div>
+    <div>
+        <h2>if/else + conditionals</h2>
+        <h3>if/else & Case (aka switch)</h3>
+        <ul>
+            <li>
+                <pre>
+                    if 1&lt2
+                        return true
+                    end
+                </pre>
+            </li>
+            <li>
+                <pre>
+                    if 1&lt2
+                        return true
+                    else
+                        return false
+                    end
+                </pre>
+            </li>
+            <li>
+                <pre>
+                    case result
+                    when 1
+                        "Answer = 1"
+                    when 2
+                        "Answer = 2"
+                    else
+                        "Default answer"
+                    end
+                </pre>
+            </li>
+            <li>unless/else = if but opposite </li>
+
+        </ul>
+        <h3>Conditionals</h3>
+        <p>Usual conditionals ie != =&gt etc plus the ones below</p>
+        <ul>
+            <li>5.eql?(5) = true , <span>Be careful with strings, held in different memory locations, 
+                ie different ID's</span>
+            </li>
+            <li>Spaceship operator  5 &lt=&gt 10 
+                <ul>
+                    <li>-1 if left &lt right</li>
+                    <li>0 if both are equal</li>
+                    <li>1 if left is &gt right</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Loops</h2>
+        <ul>
+            <li>
+                <pre>
+                    loop do
+                        i += 1
+                        break if i == 10
+                    end
+                </pre>
+            </li>
+            <li>While loop 
+                <pre>
+                    i=0
+                    while i &lt 10 do
+                        i += 1
+                    end
+                </pre>
+            </li>
+            <li>Until loop = opposire while loop</li>
+            <li>For loop, <span>0..5 is a range ie 0 - 5</span>
+                <pre>
+                    for i in 0..5
+                        puts "#{i} people around"
+                    end
+                </pre>
+            </li>
+            <li>times loop 
+                <pre>
+                    5.times do
+                        //code
+                    end
+                </pre>
+            </li>
+            <li>Upto/Downto loops , <span>|num| is an argument</span>
+                <pre>
+                    5.upto(10) {|num| print "#{num}"} 
+                </pre>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Arrays</h2>
+        <p>Lots of array methods, check online! Common ones below</p>
+        <ul>
+            <li>.empty?</li>
+            <li>.length</li>
+            <li>.reverse</li>
+            <li>.include?("Item")</li>
+            <li>.join, or .join(",") = comma seperated etc</li>
+            <li>array.each {|item| puts("#{item}")} - loops through array</li>
+            <li>nested arrays = array[0][5] - sixth item in first array</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Hashes AKA Objects</h2>
+        <p>Key value pairs, best practise, use :symbols for keys</p>
+        <ul>
+            <li>
+                <pre>
+                    hash = {
+                        :key1 => "Value 1",
+                        :key2 => "Value 2",
+                    }
+                </pre>
+            </li>
+            <li>Also create with hash = {}</li>
+            <li>dot notation to get values</li>
+            <li>bracket notations also - hash[:key1] = "Value 1"</li>
+            <li>hash.keys - returns array of all keys</li>
+            <li>hash.values - returns array of all values</li>
+            <li>hash1.merge(hash2) - merges hashes</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Methods</h2>
+        <p>Methods written as follows, use snake_case</p>
+        <ul>
+            <li>
+                <pre>
+                    def my_function (argument1, argument2)
+                        return "My Code"
+                    end
+                </pre>
+            </li>
+            <li>Can use function my_function(){} like a JS method, or do....end</li>
+            <li>Default parameter = name = "Lawrence"</li>
+            <li>Ruby will return the last expression without the return keyword!</li>
+            <li>Can chain methods</li>
+            <li>Predicate methods - return booleans, ie 5.isodd?</li>
+            <li>Bang methods - Overwrites original value ie name.downcase!</li>
+        </ul>
+        <h3>Enumerables</h3>
+        <p>Pre made methods, full list online</p>
+        <ul>
+            <li>array.select{|item| item == "item"} - returns just the item, != for all but the item</li>
+            <li>.reject - opposite of .select</li>
+            <li>array.each{|item| prints("List of each in array #{item}")} <span>Returns original array</span></li>
+            <li>.each_with_index - same as each but with index, code block = {|item,index| prints("#{index}")}</li>
+            <li>.map - same as each but returns new array</li>
+            <li>.reduce - adds each item to accumulator ie array.reduce {|sum, num| sum += num} 
+                sum is the accumulator</li>
+            <li>Can use bang method, ie .map!</li>
+        </ul>
+        <h3>Predicate Enumerables</h3>
+        <ul>
+            <li>array.include?('item') - returns true / false</li>
+            <li>array.any? {|num| num &gt 500} - if any item larger than 500 returns true/false </li>
+            <li>.all? - all must be true to return true</li>
+            <li>.none? - opposite of .all?</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Debugging</h2>
+        <ul>
+            <li>Stack trace prints each line before crash</li>
+            <li>pry-byebug for debugging 
+                <ul>
+                    <li>Install with <span>gem install pry-byebug</span></li>
+                    <li>Top of file type <span>require'pry-byebug'</span></li>
+                    <li>At any point in program type <span>binding.pry</span>, creates a breakpoint</li>                    
+                    <li>in irb next to step-over</li>                 
+                </ul>
+            </li>
         </ul>
     </div>
 </body>
