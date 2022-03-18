@@ -10,13 +10,18 @@ def substrings(string, dictionary)
     dictionary.each{|x|
         if string.include?(x)           
             results.push(x)
+            # p x
         end
-        p results
+        # p results
     }
 
     results.each{|x|
         p x
-        resultsCount.store(x, resultsCount[x] != nil ? resultsCount[x] + 1 : resultsCount[x] = 1) 
+        if resultsCount[x] == 1
+            resultsCount[x] += 1
+        else
+            resultsCount[x] = 1
+        end
     }
 
     p resultsCount
