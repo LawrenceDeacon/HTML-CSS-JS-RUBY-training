@@ -17,7 +17,7 @@ def substrings(string, dictionary)
 
     results.each{|x|
         p x
-        if resultsCount[x] == 1
+        if resultsCount[x] != nil
             resultsCount[x] += 1
         else
             resultsCount[x] = 1
