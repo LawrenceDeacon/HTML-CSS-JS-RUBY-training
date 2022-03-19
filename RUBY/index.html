@@ -73,7 +73,7 @@
         <ul>
             <li>name = "Value"</li>
             <li>variable names use snake_case</li>
-            <li>Constants should be capitalized!</li>
+            <li>Constants should be ALL CAPS!</li>
         </ul>
     </div>
     <div>
@@ -255,6 +255,89 @@
             <li>array.any? {|num| num &gt 500} - if any item larger than 500 returns true/false </li>
             <li>.all? - all must be true to return true</li>
             <li>.none? - opposite of .all?</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Classes</h2>
+        <p>Class names capitilize, and camel case, ie MyClass</p>
+        <ul>
+            <li>
+                <pre>
+                    class Person
+                        def initialize(name, age)
+                            @name = name
+                            @age = age
+                        end
+                    end
+                </pre>
+            </li>
+            <li>initialize method at start to run first thing, ie constructor, set default parameters etc</li>
+            <li>@name - instance variable, for each time the class is called</li>
+            <li>To create a new Person
+                <pre>
+                    me = Person.new("Lawrence")
+                </pre>
+                .new runs initialize method in the class
+            </li>
+            <li>Variables in Classes
+                <ul>
+                    <li>@name = Instance Variable - as used above, only availible to this instance of the class</li>
+                    <li>$name = Global variables - Avalible Everywhere</li>
+                    <li>local variables, only availible in the  method where created</li>
+                    <li>@@name = class variables - avalible within the class, not just an instance</li>
+                </ul>
+            </li>
+            <li>Inheritance
+                <ul>
+                    <li>Syntax is
+                        <pre>
+                            class DerivedClass &lt BaseClass
+                                Code Block
+                            end
+                        </pre>
+                    </li>
+                    <li>Derived class = subclass = child</li>
+                    <li>base class = super class = parent</li>
+                    <li>Same name method in DerivedClass will overwrite anything inherited of same name</li>
+                    <li>super, or super(argument) changes method to parent class / super class methods instead</li>
+                    <li>Can only have 1 superclass ever!</li>
+                    <li>Can write a class like 
+                        <pre>
+                            class Person &lt BaseClass end
+                        </pre>
+                    </li>
+                    <li>Class method prefixed by class name, ie Person.hello()</li>
+                    <li>Methods are public by default!</li>
+                    <li>put public before methods you wish to be accessable outside</li>
+                    <li>Put private before methods that can only be accessed in the class</li>
+                    <li>attr_reader :name, allows reading of @name in a class</li>
+                    <li>attr_writer :name, allows writting of @name in a class</li>
+                    <li>attr_accessor :name, allows reading and writting of @name</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Modules</h2>
+        <p>Much like a class, but cannot make instances, and cannot have subclasses</p>
+        <p>Used for storage only! Use constants!</p>
+        <ul>
+            <li>
+                <pre>
+                    module MyModule
+                        Code
+                    end
+                </pre>
+            </li>
+            <li>namespacing = where a certain variable is.</li>
+            <li>Use scope resolution operator to point code to correct constants in methods
+                ie Math::PI tells code to look in Math module, and grab the PI constant
+            </li>
+            <li>require 'NameOfModule' - To use a preset module put at top of code</li>
+            <li>include ModuleName - in a class to allow access to that module</li>
+            <li>mixin - is where you include a module into a class. Can use same module for multiple classes</li>
+            <li>extends - is like includes but makes the module avalible at a class level, not just instance </li>
+            
         </ul>
     </div>
     <div>
