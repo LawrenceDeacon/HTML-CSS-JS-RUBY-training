@@ -310,9 +310,13 @@
                     <li>Methods are public by default!</li>
                     <li>put public before methods you wish to be accessable outside</li>
                     <li>Put private before methods that can only be accessed in the class</li>
+                    <li>Put protected before methods, outside of the class they are private, inside the class they are public</li>
                     <li>attr_reader :name, allows reading of @name in a class</li>
                     <li>attr_writer :name, allows writting of @name in a class</li>
                     <li>attr_accessor :name, allows reading and writting of @name</li>
+                    <li>self.name can make a method a class method</li>
+                    <li>super(name) will take / put the name from the SuperClass</li>
+                    <li>super() with no parameters can run method that takes no parameters in superclass</li>
                 </ul>
             </li>
         </ul>
@@ -329,7 +333,17 @@
                     end
                 </pre>
             </li>
-            <li>namespacing = where a certain variable is.</li>
+            <li>namespacing = Create classes under modules
+                <pre>
+                    module MyModule
+                        class Class1
+                        end
+                        class Class2
+                        end
+                    end
+                </pre>
+                Call Class1 with MyModule::Class1
+            </li>
             <li>Use scope resolution operator to point code to correct constants in methods
                 ie Math::PI tells code to look in Math module, and grab the PI constant
             </li>
@@ -337,7 +351,9 @@
             <li>include ModuleName - in a class to allow access to that module</li>
             <li>mixin - is where you include a module into a class. Can use same module for multiple classes</li>
             <li>extends - is like includes but makes the module avalible at a class level, not just instance </li>
-            
+            <li>Use class Inheritance when dog <span>is a </span>mammal</li>
+            <li>Use interface(module) Inheritance when dog <span>has a </span>tail</li>
+            <li>puts People.ancestors - shows modules / classes that People inherits</li>
         </ul>
     </div>
     <div>
